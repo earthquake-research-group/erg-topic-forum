@@ -3,6 +3,8 @@ title: "Sessions"
 listing:
   contents:
     - "*/index.qmd"
+    - "*/index.ipynb"
+  fields: [title, author, date]
   sort: "date desc"
   type: default
   filter-ui: true

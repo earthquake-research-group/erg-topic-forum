@@ -1,0 +1,68 @@
+---
+title: "Intro to Python for scientific work"
+author: "Dan Sandiford"
+date: 2026-03-20
+categories: [method-skill, python, computing]
+execute: false
+jupyter: python3
+---
+
+
+# Why Python for earthquake science?
+
+Python gives us:
+
+- reproducible workflows
+- access to ObsPy / ML tools
+- fast numerical work
+- simple plotting
+
+This session is a **minimal survival kit**.
+
+integer = 3
+floating = 3.14
+text = "earthquake"
+boolean = True
+
+print(type(integer))
+print(type(floating))
+print(type(text))
+print(type(boolean))
+
+
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+my_dict = {"station": "AU.MEL", "magnitude": 3.2}
+
+print(my_dict["station"])
+
+magnitude = 2.7
+
+if magnitude >= 3:
+    print("Locate event")
+else:
+    print("Probably noise")
+
+
+stations = ["MEL", "OTW", "GIP"]
+
+for s in stations:
+    print("Processing", s)
+
+
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+x[:5]
+
+
+import pandas as pd
+
+df = pd.DataFrame({
+    "station": ["MEL", "OTW", "GIP"],
+    "magnitude": [2.1, 3.0, 1.8]
+})
+
+df
