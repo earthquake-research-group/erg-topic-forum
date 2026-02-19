@@ -1,0 +1,59 @@
+/*-- scss:defaults --*/
+
+/* ========= UoM COLOUR PALETTE ========= */
+/* https://designsystem.web.unimelb.edu.au/style-guide/colour-palette/*/
+
+$uom-blue: #000F46;
+$uom-blue-75: #404B74;
+$uom-blue-50: #8087A2;
+$uom-blue-25: #BFC3D1;
+
+$uom-blue-dark: #000B34;
+
+$uom-sage: #ABC1A7;
+$uom-sage-75: #C0D0BD;
+$uom-sage-50: #D5E0D3;
+$uom-sage-25: #EAEFE9;
+
+$uom-sage-dark: #444A40;
+
+/* ========= BOOTSTRAP VARIABLE OVERRIDES ========= */
+/* Make Greenstone the main brand colour */
+$primary: $uom-sage-dark;
+$secondary: $uom-blue;
+
+/* Page feel */
+$body-bg: $uom-sage-25;      /* subtle sage wash */
+$body-color: #1f1f1f;
+$border-color: $uom-sage-50;
+
+/* Links + headings keep a UoM “academic” blue */
+$link-color: $uom-blue;
+$link-hover-color: $uom-blue-75;
+
+/* Navbar: keep classic blue for identity + contrast */
+$navbar-bg: $uom-sage-dark;
+$navbar-fg: #ffffff;
+$navbar-hl: $uom-sage;
+
+/*-- scss:rules --*/
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: $uom-blue;
+}
+
+/* Make callouts feel “geo” (sage tint) */
+.callout {
+  border-left-color: $uom-sage-dark !important;
+}
+.callout.callout-note {
+  background-color: $uom-sage-25;
+}
+
+/* Inline code: subtle sage chip */
+code {
+  background-color: $uom-sage-50;
+  padding: 0.1em 0.25em;
+  border-radius: 0.25rem;
+}

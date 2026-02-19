@@ -19,7 +19,9 @@ bibliography: bibliography/references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - styles/erg-theme.scss
     toc: true
     code-copy: true
     html-math-method:
