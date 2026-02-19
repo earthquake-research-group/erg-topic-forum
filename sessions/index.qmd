@@ -1,0 +1,13 @@
+---
+title: "Sessions"
+listing:
+  contents:
+    - "*/index.qmd"
+  sort: "date desc"
+  type: default
+  filter-ui: true
+  categories: true
+  page-size: 20
+---
+
+Use the filter box and categories to find sessions by **type** (e.g. `paper-discussion`, `eq101`) or by **topic** (e.g. `fault-mechanics`, `psha`).

@@ -1,0 +1,66 @@
+---
+title: "Crustal stress, faulting and fluid flow"
+author: "Dan Sandiford"
+date: 2026-02-29
+categories: [paper-discussion, fault-mechanics, crustal-stress, fluid-flow]
+---
+
+## 3-slide summary
+
+### Slide 1 — Context
+- Relationship between crustal stress, faulting regime, and pore-fluid pressure
+- What controls whether faults are strong or weak?
+
+### Slide 2 — Key result
+
+Effective stress (normal component):
+
+$$
+\sigma'_n = \sigma_n - P_f
+$$
+
+### Slide 3 — Why it matters for ERG
+- Fluid pressure changes can trigger failure
+- Transient permeability during seismicity
+- Relevance to induced seismicity and reservoir systems
+
+## Discussion questions
+
+1. What observations would indicate a fault-valve cycle?
+2. How important is near-lithostatic fluid pressure for earthquake nucleation?
+3. How would this model appear in modern seismic + pressure datasets?
+
+
+
+---
+
+## Discussion / live notes
+
+- 
+
+---
+
+## Session resources
+
+<div class="d-flex gap-2 flex-wrap">
+
+<a href="paper.bib" class="btn btn-outline-secondary btn-sm">
+  <i class="bi bi-braces"></i> BibTeX
+</a>
+
+<a href="assets/paper.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
+  <i class="bi bi-file-earmark-pdf"></i> Paper PDF
+</a>
+
+</div>
+
+---
+
+## Media
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/XZWBhv7EjIY?start=1200"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+</div>

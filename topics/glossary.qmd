@@ -1,0 +1,10 @@
+---
+title: "Glossary"
+---
+
+Key terms and short explanations.
+
+
+## Fault-valve {#fault-valve}
+
+A cyclic process where faults are sealed and overpressured between earthquakes but become highly permeable during rupture, allowing rapid fluid discharge. It provides a mechanism for coupling **fluid pressure, effective stress, and episodic seismic slip**.

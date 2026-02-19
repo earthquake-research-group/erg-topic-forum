@@ -1,0 +1,95 @@
+# ERG Topic Forum
+
+Earthquake Research Group (University of Melbourne) --- a casual, safe
+learning space to share and learn earthquake science.
+
+We use this repo to keep lightweight notes on: - Paper discussions -
+Methods / skills demos - Work-in-progress updates - Timely global
+earthquake events - Earthquake Science 101 topics
+
+------------------------------------------------------------------------
+
+## How this site is organised
+
+-   Sessions live in: `sessions/<session-slug>/index.qmd`
+-   Session attachments: `sessions/<session-slug>/assets/`
+-   Template for new sessions: `templates/session/`
+-   Central bibliography: `bibliography/references.bib`
+-   Helper scripts: `scripts/`
+
+------------------------------------------------------------------------
+
+## Add a new session from a local computer
+
+### 1) Create a new session folder from the template
+
+``` bash
+SESSION="your-session-slug"
+cp -R templates/session "sessions/$SESSION"
+```
+
+### 2) Edit the session metadata
+
+Update:
+
+``` yaml
+title:
+author:
+date:
+categories:
+```
+
+### 3) Add files (optional)
+
+-   PDF → `assets/paper.pdf`
+-   BibTeX → `paper.bib`
+
+### 4) Update the central bibliography
+
+``` bash
+scripts/collect_bibs.sh
+```
+
+### 5) Preview
+
+``` bash
+quarto preview
+```
+
+------------------------------------------------------------------------
+
+## Add a new session via GitHub (web browser)
+
+### Create the page
+
+1.  Go to `sessions/`
+2.  Click **Add file → Create new file**
+3.  Name it:
+
+```{=html}
+<!-- -->
+```
+    sessions/<session-slug>/index.qmd
+
+4.  Paste the template
+5.  Edit metadata
+6.  Commit
+
+### Upload a PDF
+
+Go to:
+
+    sessions/<session-slug>/assets/
+
+Upload `paper.pdf`.
+
+------------------------------------------------------------------------
+
+## Naming conventions
+
+Use short, stable slugs (no dates):
+
+-   `sibson_crustal-stress-faulting-fluid-flow`
+-   `eq101_intro-psha`
+
+Tags: - lowercase - hyphen-separated - include one session-type tag

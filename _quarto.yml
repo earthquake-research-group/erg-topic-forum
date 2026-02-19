@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "ERG Topic Forum"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: sessions/index.qmd
+        text: Sessions
+      - href: topics/reading-list.qmd
+        text: Reading list
+      - href: topics/glossary.qmd
+        text: Glossary
+
+bibliography: bibliography/references.bib
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"

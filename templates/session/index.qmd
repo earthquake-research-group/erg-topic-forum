@@ -1,0 +1,34 @@
+---
+title: "<Session title>"
+author: "<Presenter name>"
+date: <YYYY-MM-DD>
+categories: [paper-discussion, <topic-1>, <topic-2>]
+---
+
+## 3-slide summary
+
+### Slide 1 — Context
+- What’s the problem / setting?
+- Why do we care?
+
+### Slide 2 — Key result
+- The one thing to remember
+
+### Slide 3 — Why it matters for ERG
+- Relevance to our data / region / workflows
+
+## Discussion questions
+1.
+2.
+3.
+
+## Links / files
+
+- <i class="bi bi-braces"></i> [BibTeX](paper.bib)
+
+<a href="assets/paper.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
+  <i class="bi bi-file-earmark-pdf"></i> Paper PDF
+</a>
+
+## Live notes
+-

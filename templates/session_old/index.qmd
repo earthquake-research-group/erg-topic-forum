@@ -1,0 +1,31 @@
+---
+title: "<Session title>"
+author: "<Presenter name>"
+date: <YYYY-MM-DD>
+categories: [paper-discussion, <topic-1>, <topic-2>]
+---
+
+## 3-slide summary
+
+### Slide 1 — Context
+- What’s the problem / setting?
+- Why do we care?
+
+### Slide 2 — Key result
+- The one figure / idea / number to remember
+
+### Slide 3 — Why it matters for ERG
+- Relevance to our data / region / workflows
+
+## Discussion questions
+1.
+2.
+3.
+
+## Links / files
+- Paper: `assets/paper.pdf` (optional)
+- BibTeX: `paper.bib`
+- Other links:
+
+## Live notes
+*(Fill during the meeting)*

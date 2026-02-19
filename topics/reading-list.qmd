@@ -1,0 +1,9 @@
+---
+title: "Reading list"
+nocite: |
+  @*
+---
+
+This page lists everything currently in `bibliography/references.bib`.
+
+## References
