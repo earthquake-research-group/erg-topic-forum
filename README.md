@@ -81,4 +81,4 @@ quarto preview
 School of Geography, Earth and Atmospheric Sciences  
 University of Melbourne
 
-Funding / support: **AuScope / OzScope**
+Funding / support: **AuScope**
