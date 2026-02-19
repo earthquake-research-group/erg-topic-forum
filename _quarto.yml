@@ -14,6 +14,8 @@ website:
         text: Reading list
       - href: topics/glossary.qmd
         text: Glossary
+      - href: docs/how-to.qmd
+        text: How to use
 
 bibliography: bibliography/references.bib
 

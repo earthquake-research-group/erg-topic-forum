@@ -1,95 +1,35 @@
-# ERG Topic Forum
+---
+title: "ERG Topic Forum"
+page-layout: full
+---
 
-Earthquake Research Group (University of Melbourne) --- a casual, safe
-learning space to share and learn earthquake science.
+## Earthquake Research Group · University of Melbourne
 
-We use this repo to keep lightweight notes on: - Paper discussions -
-Methods / skills demos - Work-in-progress updates - Timely global
-earthquake events - Earthquake Science 101 topics
+A shared space for short, friendly sessions on earthquake science — paper discussions, methods, Earthquake Science 101, and timely events.
 
-------------------------------------------------------------------------
+<div class="d-flex gap-2 flex-wrap">
 
-## How this site is organised
+<a href="sessions/" class="btn btn-primary btn-lg">
+  Browse sessions
+</a>
 
--   Sessions live in: `sessions/<session-slug>/index.qmd`
--   Session attachments: `sessions/<session-slug>/assets/`
--   Template for new sessions: `templates/session/`
--   Central bibliography: `bibliography/references.bib`
--   Helper scripts: `scripts/`
+<a href="docs/how-to.html" class="btn btn-outline-secondary btn-lg">
+  How to use this site
+</a>
 
-------------------------------------------------------------------------
+</div>
 
-## Add a new session from a local computer
+---
 
-### 1) Create a new session folder from the template
+## Quick links
 
-``` bash
-SESSION="your-session-slug"
-cp -R templates/session "sessions/$SESSION"
-```
+- SGEAS: https://sgeas.unimelb.edu.au/
+- AuScope: https://www.auscope.org.au/
+- ERG GitHub organisation: https://github.com/earthquake-research-group
+- This website repository: https://github.com/earthquake-research-group/erg-topic-forum
 
-### 2) Edit the session metadata
+---
 
-Update:
-
-``` yaml
-title:
-author:
-date:
-categories:
-```
-
-### 3) Add files (optional)
-
--   PDF → `assets/paper.pdf`
--   BibTeX → `paper.bib`
-
-### 4) Update the central bibliography
-
-``` bash
-scripts/collect_bibs.sh
-```
-
-### 5) Preview
-
-``` bash
-quarto preview
-```
-
-------------------------------------------------------------------------
-
-## Add a new session via GitHub (web browser)
-
-### Create the page
-
-1.  Go to `sessions/`
-2.  Click **Add file → Create new file**
-3.  Name it:
-
-```{=html}
-<!-- -->
-```
-    sessions/<session-slug>/index.qmd
-
-4.  Paste the template
-5.  Edit metadata
-6.  Commit
-
-### Upload a PDF
-
-Go to:
-
-    sessions/<session-slug>/assets/
-
-Upload `paper.pdf`.
-
-------------------------------------------------------------------------
-
-## Naming conventions
-
-Use short, stable slugs (no dates):
-
--   `sibson_crustal-stress-faulting-fluid-flow`
--   `eq101_intro-psha`
-
-Tags: - lowercase - hyphen-separated - include one session-type tag
+<div class="small text-muted">
+Maintained by the Earthquake Research Group (University of Melbourne). Funding / support: AuScope.
+</div>

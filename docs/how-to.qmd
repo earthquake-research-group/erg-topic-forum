@@ -1,0 +1,113 @@
+---
+title: "How to use this site"
+---
+
+This site is the ERG Topic Forum (Earthquake Research Group, University of Melbourne). Content lives in GitHub and is rendered with **Quarto**.
+
+## What is Quarto?
+
+Quarto turns source files into a website.
+
+- **.qmd** → Quarto Markdown (best for written notes)
+- **.md** → Markdown (plain text formatting)
+- **.ipynb** → Jupyter notebooks (best for tutorials / runnable demos)
+
+---
+
+## Add a new session from a local computer
+
+### 1) Create a session from the template
+
+```bash
+SESSION="your-session-slug"
+cp -R templates/session "sessions/$SESSION"
+```
+
+### 2) Edit the metadata
+
+Open:
+
+```bash
+nano "sessions/$SESSION/index.qmd"
+```
+
+Set the YAML front matter at the top:
+
+```yaml
+---
+title: "Your session title"
+author: "Your name"
+date: 2026-03-20
+categories: [paper-discussion, topic]
+execute: false
+---
+```
+
+### 3) Preview locally
+
+```bash
+quarto preview
+```
+
+---
+
+## Add a session using the GitHub web editor only
+
+### Create a QMD session page
+
+1. Go to the repo → `sessions/`
+2. **Add file → Create new file**
+3. Name it:
+
+   `sessions/<session-slug>/index.qmd`
+
+4. Paste the session template from `templates/session/index.qmd`
+5. Edit the YAML header (title/author/date/categories)
+6. Commit
+
+### Upload assets (PDFs, figures)
+
+1. Go to `sessions/<session-slug>/assets/`
+2. **Add file → Upload files**
+3. Commit
+
+---
+
+## Notebook sessions (Jupyter)
+
+Create a notebook session at:
+
+```text
+sessions/<session-slug>/index.ipynb
+```
+
+In the notebook, add this as the **first Markdown cell**:
+
+```yaml
+---
+title: "Notebook title"
+author: "Your name"
+date: 2026-03-20
+categories: [method-skill, python]
+execute: false
+jupyter: python3
+---
+```
+
+---
+
+## How the website builds
+
+This repo uses **GitHub Actions** to build the website after each push to the default branch.
+
+If you can see your change on GitHub, the site updates after the workflow finishes (Actions tab).
+
+---
+
+## Colab
+
+Open any notebook in Colab (after it is committed and pushed to GitHub):
+
+```text
+https://colab.research.google.com/github/earthquake-research-group/erg-topic-forum/blob/main/sessions/<session-slug>/index.ipynb
+```
