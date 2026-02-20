@@ -1,0 +1,25 @@
+---
+title: "How Does the Onset of Offset Influence Geologic Slip Rates?"
+author: "James La Greca"
+date: 2026-02-23
+categories: [paper-discussion, slip-rates, paleoseismology]
+presenter: "James La Greca"
+paper-authors: "Alexandra E. Hatem, Richard W. Briggs, Ryan D. Gold"
+---
+
+## Abstract
+
+Geologic slip rates are typically based on the displacement accrued by a geomorphic or stratigraphic feature and the age of the offset feature. Because slip rates are commonly calculated by dividing the displacement of a faulted marker by its age, they contain two open time intervals: the elapsed time between the age of an offset feature and the age of the earthquake that displaced the feature, and the time between the present-day and the most recent earthquake. Here, we explore the influence of including unconstrained open intervals in geologic slip rate calculations. We test the degree to which these open intervals affect geologic slip rates and their uncertainties, and we find that their influence depends primarily on mean earthquake recurrence intervals (RIs). Slip rates on faults with longer RIs, such as the Wasatch fault, can be greatly influenced by an increase of up to 20% when accounting for open intervals. In contrast, slip rates on faults with shorter RIs, such as the San Andreas fault, are only slightly influenced by the assumption that slip rates calculated over open intervals approximate those calculated over closed intervals. Our analyses indicate that faults with moderate slip rates (~0.2–5 mm/yr) are sensitive to both open interval effects themselves, as well as methods to quantify and account for these effects. We re-evaluate how slip rates are calculated and defined in displacement–time space using published deformation records. We explore the utility of assigning a probability distribution to the initiation of offset of the oldest faulted feature and the timing of the most recent earthquake (MRE). We find that calculating geologic slip rates without using probability distributions that capture the timing of the MRE and the onset of offset of the oldest faulted feature, especially on slow-to-moderate slip rate faults, can lead to systematic underestimation of average geologic slip rates.
+
+## Key points
+
+- _To be completed_
+
+## Discussion questions
+
+- _To be completed_
+
+## Links / files
+
+- Paper PDF: `assets/paper.pdf`
+- BibTeX: `paper.bib`
