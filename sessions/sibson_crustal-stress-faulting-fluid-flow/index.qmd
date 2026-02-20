@@ -3,7 +3,24 @@ title: "Crustal stress, faulting and fluid flow"
 author: "Dan Sandiford"
 date: 2026-02-29
 categories: [paper-discussion, fault-mechanics, crustal-stress, fluid-flow]
+bibliography: paper.bib
+nocite: '@*'
 ---
+
+## Paper details
+
+### Citation
+
+::: {#refs}
+:::
+
+
+### Abstract
+
+Differential stress exerts both static and dynamic effects on rock-mass permeability, modulating fluid flow in the Earth's crust. Static stress fields impose a permeability anisotropy from stress-controlled features such as faults, extension fractures, and stylolites which, depending on the tectonic regime, may enhance, or counteract existing anisotropic permeability in layered rock sequences. Textural evidence from hydrothermal veins suggests, however, that fluid flow in fault-related fracture systems generally occurs episodically and that dynamic stress cycling effects are widespread. In the vicinity of active faults that undergo intermittent rupturing, permeability and fluid flux may be tied to the earthquake cycle through a range of mechanisms, leading to complex interactions between stress cycling, the creation and destruction of permeability, and fluid flow. Mechanisms for fluid redistribution include: (1) various forms of dilatancy (localized to the fault zone or extending through the surrounding rock mass) related to changes in shear stress and/or mean stress that occur during the fault loading cycle; (2) localized post-seismic redistribution around rupture irregularities, especially dilational jogs and bends which act as suction pumps; and (3) post-seismic discharge of fluids from overpressured portions of the crust through fault-valve action when ruptures breach impermeable barriers. All of these processes may be involved in fluid redistribution around active faults, but they operate to varying extents at different crustal levels, and in different tectonic regimes.
+
+
+
 
 ## Presentation summary
 
@@ -25,16 +42,12 @@ $$
 - Transient permeability during seismicity
 - Relevance to induced seismicity and reservoir systems
 
----
-
-## Abstract
-
-Differential stress exerts both static and dynamic effects on rock-mass permeability, modulating fluid flow in the Earth's crust. Static stress fields impose a permeability anisotropy from stress-controlled features such as faults, extension fractures, and stylolites which, depending on the tectonic regime, may enhance, or counteract existing anisotropic permeability in layered rock sequences. Textural evidence from hydrothermal veins suggests, however, that fluid flow in fault-related fracture systems generally occurs episodically and that dynamic stress cycling effects are widespread. In the vicinity of active faults that undergo intermittent rupturing, permeability and fluid flux may be tied to the earthquake cycle through a range of mechanisms, leading to complex interactions between stress cycling, the creation and destruction of permeability, and fluid flow. Mechanisms for fluid redistribution include: (1) various forms of dilatancy (localized to the fault zone or extending through the surrounding rock mass) related to changes in shear stress and/or mean stress that occur during the fault loading cycle; (2) localized post-seismic redistribution around rupture irregularities, especially dilational jogs and bends which act as suction pumps; and (3) post-seismic discharge of fluids from overpressured portions of the crust through fault-valve action when ruptures breach impermeable barriers. All of these processes may be involved in fluid redistribution around active faults, but they operate to varying extents at different crustal levels, and in different tectonic regimes.
 
 ---
 
+## Group Discussion
 
-## Discussion questions
+### Discussion questions
 
 1. What observations would indicate a fault-valve cycle?
 2. How important is near-lithostatic fluid pressure for earthquake nucleation?
@@ -42,7 +55,7 @@ Differential stress exerts both static and dynamic effects on rock-mass permeabi
 
 ---
 
-## Discussion / live notes
+### Discussion / live notes
 
 - 
 
@@ -64,7 +77,7 @@ Differential stress exerts both static and dynamic effects on rock-mass permeabi
 
 ---
 
-## Media
+### Media
 
 <div class="ratio ratio-16x9">
 <iframe src="https://www.youtube.com/embed/XZWBhv7EjIY?start=1200"

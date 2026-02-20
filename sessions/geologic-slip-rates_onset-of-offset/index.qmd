@@ -3,25 +3,21 @@ title: "How Does the Onset of Offset Influence Geologic Slip Rates?"
 author: "James La Greca"
 date: 2026-02-23
 categories: [paper-discussion, slip-rates, paleoseismology]
----
-
-## Presentation summary
-
-### Takeaway
-- _One–three sentence plain-English takeaway_
-
-### Key points
-- _Core concept_
-- _What they did_
-- _What they found_
-
-### Why it matters for ERG
-- _Relevance to our data / region / workflows_
-
+bibliography: paper.bib
+nocite: '@*'
 ---
 
 
-## Abstract
+
+## Paper details
+
+### Citation
+
+::: {#refs}
+:::
+
+
+### Abstract
 
 Geologic slip rates are typically based on the displacement accrued by a geomorphic or
 stratigraphic feature and the age of the offset feature. Because slip rates are commonly
@@ -47,7 +43,25 @@ of offset of the oldest faulted feature, especially on slow-to-moderate slip rat
 lead to systematic underestimation of average geologic slip rates.
 
 
-## Discussion questions
+
+## Presentation summary
+
+### Takeaway
+- _One–three sentence plain-English takeaway_
+
+### Key points
+- _Core concept_
+- _What they did_
+- _What they found_
+
+### Why it matters for ERG
+- _Relevance to our data / region / workflows_
+
+---
+
+## Group Discussion
+
+### Discussion questions
 
 1. _To be completed_
 2. _To be completed_
@@ -55,7 +69,7 @@ lead to systematic underestimation of average geologic slip rates.
 
 ---
 
-## Discussion / live notes
+### Discussion / live notes
 
 - 
 
@@ -75,6 +89,7 @@ lead to systematic underestimation of average geologic slip rates.
 
 </div>
 
+
 ---
 
-## Media
+### Media

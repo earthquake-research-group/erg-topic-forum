@@ -7,9 +7,19 @@ categories: [paper-discussion, <topic-1>, <topic-2>]
 # format: revealjs
 ---
 
+## Paper details
+
+### Citation
+
+::: {#refs}
+:::
+
+
+### Abstract
+
 ## Presentation summary
 
-### TL;DR
+### Takeaway
 - _One–three sentence plain-English takeaway_
 
 ### Key points
@@ -30,7 +40,9 @@ Paper abstract here, if you want!
 
 ---
 
-## Discussion questions
+## Group Discussion
+
+### Discussion questions
 
 1. _To be completed_
 2. _To be completed_
@@ -38,7 +50,7 @@ Paper abstract here, if you want!
 
 ---
 
-## Discussion / live notes
+### Discussion / live notes
 
 - 
 
