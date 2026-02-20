@@ -3,32 +3,72 @@ title: "<Session title>"
 author: "<Presenter name>"
 date: <YYYY-MM-DD>
 categories: [paper-discussion, <topic-1>, <topic-2>]
+# Uncomment if you are presenting with slides
+# format: revealjs
 ---
 
-## 3-slide summary
+## Presentation summary
 
-### Slide 1 — Context
-- What’s the problem / setting?
-- Why do we care?
+### TL;DR
+- _One–three sentence plain-English takeaway_
 
-### Slide 2 — Key result
-- The one thing to remember
+### Key points
+- _Core concept_
+- _Key result / figure / equation_
+- _What controls the behaviour_
 
-### Slide 3 — Why it matters for ERG
-- Relevance to our data / region / workflows
+### Why it matters for ERG
+- _Our data_
+- _Our region_
+- _Our workflows_
+
+---
+
+## Abstract
+
+Paper abstract here, if you want!
+
+---
 
 ## Discussion questions
-1.
-2.
-3.
 
-## Links / files
+1. _To be completed_
+2. _To be completed_
+3. _To be completed_
 
-- <i class="bi bi-braces"></i> [BibTeX](paper.bib)
+---
+
+## Discussion / live notes
+
+- 
+
+---
+
+## Session resources
+
+<div class="d-flex gap-2 flex-wrap">
+
+<a href="paper.bib" class="btn btn-outline-secondary btn-sm">
+  <i class="bi bi-braces"></i> BibTeX
+</a>
 
 <a href="assets/paper.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
   <i class="bi bi-file-earmark-pdf"></i> Paper PDF
 </a>
 
-## Live notes
--
+</div>
+
+---
+
+## Media
+
+<!-- Optional: video, figures, or slide export -->
+
+<!--
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+</div>
+-->
