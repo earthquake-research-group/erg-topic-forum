@@ -1,0 +1,100 @@
+name: "Propose a session"
+description: "Propose a new ERG Topic Forum session (paper discussion, methods, EQ101, etc.)"
+title: "[Session] "
+labels: ["session-proposal"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a session.
+        This issue will later be used to auto-generate a session folder + page.
+
+  - type: input
+    id: session_title
+    attributes:
+      label: Session title
+      description: The title that will appear on the website.
+      placeholder: "How Does the Onset of Offset Influence Geologic Slip Rates?"
+    validations:
+      required: true
+
+  - type: input
+    id: presenter
+    attributes:
+      label: Presenter
+      description: Who is presenting this session?
+      placeholder: "James La Greca"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: session_type
+    attributes:
+      label: Session type
+      description: Pick the session format/category.
+      options:
+        - paper-discussion
+        - methods-skill
+        - earthquake-science-101
+        - timely-event
+        - work-in-progress
+    validations:
+      required: true
+
+  - type: input
+    id: session_date
+    attributes:
+      label: Session date (YYYY-MM-DD)
+      description: Date of the session (Melbourne time).
+      placeholder: "2026-02-23"
+    validations:
+      required: true
+
+  - type: input
+    id: doi
+    attributes:
+      label: DOI (optional)
+      description: DOI for the paper (if applicable).
+      placeholder: "10.xxxx/xxxxxx"
+    validations:
+      required: false
+
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper URL (optional)
+      description: Link to publisher page / PDF / preprint.
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract (paste text)
+      description: Paste the abstract here (for paper discussions).
+      placeholder: "Abstract: ..."
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: bibtex
+    attributes:
+      label: BibTeX (optional)
+      description: If you already have a BibTeX entry, paste it here. We'll later use it to build paper.bib automatically.
+      placeholder: "@article{...}"
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: Anything else (figures, datasets, preferred slug/topic tags, Colab notebook idea, etc.).
+      placeholder: "e.g., Suggested slug: geologic-slip-rates_onset-of-offset"
+      render: text
+    validations:
+      required: false
