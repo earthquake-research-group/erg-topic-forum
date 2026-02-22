@@ -66,7 +66,7 @@ lead to systematic underestimation of average geologic slip rates.
 
 1. How should we best calculate slip rates in Australia?
 2. Are there easy ways which we could minimise this open interval uncertainty? 
-3. Alternative methods for slip calculation?
+3. Alternative methods for slip calculation? Expected displacement / RI?
 
 ---
 
