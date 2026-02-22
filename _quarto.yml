@@ -20,7 +20,9 @@ website:
   comments:
     giscus:
       repo: earthquake-research-group/erg-topic-forum
-      category: "Session discussions"
+      repo-id: R_kgDORThOtQ
+      category: General
+      category-id: DIC_kwDORThOtc4C21tY
       mapping: pathname
 
 bibliography: bibliography/references.bib
