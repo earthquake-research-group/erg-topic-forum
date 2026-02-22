@@ -1,5 +1,6 @@
 ---
 title: "Sessions"
+comments: false
 listing:
   contents:
     - "*/index.qmd"

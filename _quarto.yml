@@ -4,6 +4,7 @@ project:
 
 website:
   title: "ERG Topic Forum"
+  site-url: https://earthquake-research-group.github.io/erg-topic-forum
   navbar:
     left:
       - href: index.qmd
@@ -16,6 +17,11 @@ website:
         text: Glossary
       - href: docs/how-to.qmd
         text: How to use
+  comments:
+    giscus:
+      repo: earthquake-research-group/erg-topic-forum
+      category: "Session discussions"
+      mapping: pathname
 
 bibliography: bibliography/references.bib
 

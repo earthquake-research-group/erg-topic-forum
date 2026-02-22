@@ -2,6 +2,7 @@
 title: "Reading list"
 nocite: |
   @*
+comments: false
 ---
 
 This page lists everything currently in `bibliography/references.bib`.

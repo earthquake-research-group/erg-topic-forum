@@ -1,6 +1,7 @@
 ---
 title: "ERG Topic Forum"
 page-layout: full
+comments: false
 ---
 
 ## Earthquake Research Group · University of Melbourne
