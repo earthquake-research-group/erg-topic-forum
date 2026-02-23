@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: _site
-
 website:
   title: "ERG Topic Forum"
   site-url: https://earthquake-research-group.github.io/erg-topic-forum

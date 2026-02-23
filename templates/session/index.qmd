@@ -3,6 +3,8 @@ title: "<Session title>"
 author: "<Presenter name>"
 date: <YYYY-MM-DD>
 categories: [paper-discussion, <topic-1>, <topic-2>]
+bibliography: paper.bib
+nocite: '@*'
 # Uncomment if you are presenting with slides
 # format: revealjs
 ---
@@ -14,8 +16,9 @@ categories: [paper-discussion, <topic-1>, <topic-2>]
 ::: {#refs}
 :::
 
-
 ### Abstract
+_Paste the paper abstract here (optional)._
+
 
 ## Presentation summary
 
@@ -31,28 +34,6 @@ categories: [paper-discussion, <topic-1>, <topic-2>]
 - _Our data_
 - _Our region_
 - _Our workflows_
-
----
-
-## Abstract
-
-Paper abstract here, if you want!
-
----
-
-## Group Discussion
-
-### Discussion questions
-
-1. _To be completed_
-2. _To be completed_
-3. _To be completed_
-
----
-
-### Discussion / live notes
-
-- 
 
 ---
 
@@ -72,15 +53,21 @@ Paper abstract here, if you want!
 
 ---
 
-## Media
+## Group discussion
 
-<!-- Optional: video, figures, or slide export -->
+### Proposed discussion questions
 
-<!--
-<div class="ratio ratio-16x9">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID"
-title="YouTube video"
-allowfullscreen>
-</iframe>
-</div>
--->
+1. _To be completed_
+2. _To be completed_
+3. _To be completed_
+
+
+### Discussion (via GitHub)
+
+The discussion for this session lives in the **comments below**.
+
+Add thoughts, references, data links, or follow-up questions — this stays as a running record for the group.
+
+(GitHub login required the first time.)
+
+---

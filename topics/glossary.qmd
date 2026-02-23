@@ -1,5 +1,6 @@
 ---
 title: "Glossary"
+comments: false
 ---
 
 Key terms and short explanations.

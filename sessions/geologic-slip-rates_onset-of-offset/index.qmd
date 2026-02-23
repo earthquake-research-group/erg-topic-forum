@@ -55,24 +55,10 @@ lead to systematic underestimation of average geologic slip rates.
 - On the San Andreas, the effect is negligible (<10% change). On the Wasatch, median slip rates increased ~20% once open intervals were accounted for. At very long RIs (3,000+ yr), the bias can reach ~50%. They also argue that single-earthquake displacement records aren't slip rates at all — they're just observations of paleosurface rupture.
 
 ### Why it matters for ERG
+
 - Australian intraplate faults have recurrence intervals of 10,000–100,000+ years. The paper explicitly flags that faults with RIs >10,000 yr are most affected by open intervals but notes their own method can't fully address those cases (Fig. 3d).
 - How many earthquakes are making up our slip rates of Pleistocene time markers? Another paper discussion for future (Styron, 2019). 
 - For PSHA in SCRs, if we're feeding underestimated slip rates into hazard models, we're underestimating seismicity rates on the faults we do know about — compounding the already large epistemic uncertainty from unknown faults
----
-
-## Group Discussion
-
-### Discussion questions
-
-1. How should we best calculate slip rates in Australia?
-2. Are there easy ways which we could minimise this open interval uncertainty? 
-3. Alternative methods for slip calculation? Expected displacement / RI?
-
----
-
-### Discussion / live notes
-
-- 
 
 ---
 
@@ -90,7 +76,23 @@ lead to systematic underestimation of average geologic slip rates.
 
 </div>
 
-
 ---
 
-### Media
+## Group Discussion
+
+### Discussion questions
+
+1. How should we best calculate slip rates in Australia?
+2. Are there easy ways which we could minimise this open interval uncertainty? 
+3. Alternative methods for slip calculation? Expected displacement / RI?
+
+
+### Discussion (via GitHub)
+
+The discussion for this session lives in the **comments below**.
+
+Add thoughts, references, data links, or follow-up questions — this stays as a running record for the group.
+
+(GitHub login required the first time.)
+
+---

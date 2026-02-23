@@ -43,21 +43,6 @@ $$
 
 ---
 
-## Group Discussion
-
-### Discussion questions
-
-1. What observations would indicate a fault-valve cycle?
-2. How important is near-lithostatic fluid pressure for earthquake nucleation?
-3. How would this model appear in modern seismic + pressure datasets?
-
----
-
-### Discussion / live notes
-
-- 
-
----
 
 ## Session resources
 
@@ -83,3 +68,23 @@ title="YouTube video"
 allowfullscreen>
 </iframe>
 </div>
+
+## Group Discussion
+
+---
+
+### Discussion questions
+
+1. What observations would indicate a fault-valve cycle?
+2. How important is near-lithostatic fluid pressure for earthquake nucleation?
+3. How would this model appear in modern seismic + pressure datasets?
+
+### Discussion (via GitHub)
+
+The discussion for this session lives in the **comments below**.
+
+Add thoughts, references, data links, or follow-up questions — this stays as a running record for the group.
+
+(GitHub login required the first time.)
+
+---
