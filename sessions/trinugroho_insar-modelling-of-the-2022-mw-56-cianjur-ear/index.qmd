@@ -1,0 +1,101 @@
+---
+title: "InSAR Modelling of the 2022 Mw 5.6 Cianjur Earthquake, Indonesia"
+author: "Trinugroho"
+date: 2026-03-02
+categories: [work-in-progress]
+bibliography: paper.bib
+nocite: '@*'
+---
+
+## Paper details
+
+### Citation
+
+::: {#refs}
+:::
+
+### Abstract
+
+_Paste the paper abstract here._
+
+---
+
+## Presentation summary
+
+### Takeaway
+- _One–three sentence plain-English takeaway._
+
+### Key points
+- _Core concept_
+- _Key result / figure / equation_
+- _What controls the behaviour_
+
+### Why it matters for ERG
+- _Our data_
+- _Our region_
+- _Our workflows_
+
+---
+
+## Session resources
+
+<div class="d-flex gap-2 flex-wrap">
+
+<a href="paper.bib" class="btn btn-outline-secondary btn-sm">
+  <i class="bi bi-braces"></i> BibTeX
+</a>
+
+<a href="assets/paper.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
+  <i class="bi bi-file-earmark-pdf"></i> Paper PDF
+</a>
+
+<!-- OPTIONAL: Uncomment to add a slides link.
+<a href="assets/slides.pdf" target="_blank" class="btn btn-outline-success btn-sm">
+  <i class="bi bi-easel"></i> Slides
+</a>
+-->
+
+</div>
+
+---
+
+<!-- OPTIONAL: YouTube video embed. Uncomment and replace VIDEO_ID.
+
+## Media
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+</div>
+
+-->
+
+<!-- OPTIONAL: Image or figure. Uncomment and replace path and caption.
+
+## Media
+
+![Caption for your figure.](assets/figure.png)
+
+-->
+
+---
+
+## Group discussion
+
+### Proposed discussion questions
+
+1. _To be completed_
+2. _To be completed_
+3. _To be completed_
+
+### Discussion (via GitHub)
+
+The discussion for this session lives in the **comments below**.
+
+Add thoughts, references, data links, or follow-up questions — this stays as a running record for the group.
+
+(GitHub login required the first time.)
+
+---
