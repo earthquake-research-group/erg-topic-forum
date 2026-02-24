@@ -1,0 +1,52 @@
+name: Create session from approved issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-session:
+    if: github.event.label.name == 'approve'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Scaffold session
+        id: scaffold
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python scripts/create_session_from_issue.py
+          echo "slug=$(cat .session_slug)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push new session
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sessions/
+          git commit -m "Add session scaffold: ${{ steps.scaffold.outputs.slug }} (closes #${{ github.event.issue.number }})"
+          git push
+
+      - name: Comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const slug = '${{ steps.scaffold.outputs.slug }}';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ Session scaffolded at \`sessions/${slug}/\`.\n\nThe site will rebuild and publish shortly. Edit \`sessions/${slug}/index.qmd\` to fill in the presentation summary, discussion questions, and any optional sections (YouTube, images, slides).`
+            });

@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.qmd"
+    - "**/*.ipynb"
+    - "!templates/**"
 website:
   title: "ERG Topic Forum"
   site-url: https://earthquake-research-group.github.io/erg-topic-forum

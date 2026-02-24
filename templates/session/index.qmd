@@ -1,12 +1,10 @@
 ---
-title: "<Session title>"
-author: "<Presenter name>"
-date: <YYYY-MM-DD>
-categories: [paper-discussion, <topic-1>, <topic-2>]
+title: "{{TITLE}}"
+author: "{{AUTHOR}}"
+date: {{DATE}}
+categories: {{CATEGORIES}}
 bibliography: paper.bib
 nocite: '@*'
-# Uncomment if you are presenting with slides
-# format: revealjs
 ---
 
 ## Paper details
@@ -17,13 +15,15 @@ nocite: '@*'
 :::
 
 ### Abstract
-_Paste the paper abstract here (optional)._
 
+{{ABSTRACT}}
+
+---
 
 ## Presentation summary
 
 ### Takeaway
-- _One–three sentence plain-English takeaway_
+- _One–three sentence plain-English takeaway._
 
 ### Key points
 - _Core concept_
@@ -49,7 +49,36 @@ _Paste the paper abstract here (optional)._
   <i class="bi bi-file-earmark-pdf"></i> Paper PDF
 </a>
 
+<!-- OPTIONAL: Uncomment to add a slides link.
+<a href="assets/slides.pdf" target="_blank" class="btn btn-outline-success btn-sm">
+  <i class="bi bi-easel"></i> Slides
+</a>
+-->
+
 </div>
+
+---
+
+<!-- OPTIONAL: YouTube video embed. Uncomment and replace VIDEO_ID.
+
+## Media
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+</div>
+
+-->
+
+<!-- OPTIONAL: Image or figure. Uncomment and replace path and caption.
+
+## Media
+
+![Caption for your figure.](assets/figure.png)
+
+-->
 
 ---
 
@@ -60,7 +89,6 @@ _Paste the paper abstract here (optional)._
 1. _To be completed_
 2. _To be completed_
 3. _To be completed_
-
 
 ### Discussion (via GitHub)
 
