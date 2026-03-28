@@ -23,23 +23,147 @@ Differential stress exerts both static and dynamic effects on rock-mass permeabi
 ## Presentation summary
 
 ### Takeaway
-Fluid pressure reduces effective normal stress, weakening faults and enabling transient permeability during seismic and interseismic cycles.
 
-### Key points
-- Relationship between crustal stress, faulting regime, and pore-fluid pressure
-- Effective stress controls fault strength:
+Crustal stress controls both *where* fluids can flow (permeability geometry) and *whether faults slip* (via effective stress). Fluid flow through fault zones is fundamentally episodic — driven by the earthquake cycle, not steady-state gradients. Stress cycling is the great modulator of fluid flow in the deforming crust.
+
+---
+
+### Background: a brief stress primer
+
+::: {.callout-note collapse="true"}
+## What is stress, and why do principal stresses matter?
+
+**Stress** is force per unit area acting inside a rock. At any point in the crust, we can describe the full stress state using three **principal stresses** — mutually perpendicular axes along which there is no shear, only compression (or tension):
+
+| Symbol | Name | Meaning |
+|--------|------|---------|
+| σ₁ | Greatest principal stress | Maximum compression |
+| σ₂ | Intermediate principal stress | |
+| σ₃ | Least principal stress | Minimum compression (or maximum tension) |
+
+Their orientations define the **tectonic regime**:
+
+- **Thrust/compressional**: σ₁ horizontal, σ₃ vertical — crust being squeezed horizontally
+- **Normal/extensional**: σ₁ vertical, σ₃ horizontal — crust being pulled apart
+- **Strike-slip**: σ₁ and σ₃ both horizontal, σ₂ vertical
+
+On a fault plane, the principal stresses resolve into:
+
+- **Normal stress** (σₙ) — acting perpendicular to the fault surface, clamping it shut
+- **Shear stress** (τ) — acting parallel to the fault, driving slip
+
+A fault slips when shear stress exceeds frictional resistance. The critical role of fluids is that **pore fluid pressure (Pf) directly reduces the effective normal stress**:
 
 $$
 \sigma'_n = \sigma_n - P_f
 $$
 
-- High fluid pressures allow fault failure at lower differential stress
+Higher fluid pressure → lower effective clamping force → fault fails at lower differential stress. This is the Hubbert–Rubey concept (1959), formalised in a Coulomb friction criterion:
+
+$$
+\tau_r = C + \mu_s(\sigma_n - P_f)
+$$
+
+where C is cohesion and μₛ ≈ 0.75 is the friction coefficient. The dimensionless **pore-fluid factor** λᵥ = Pf/σᵥ provides a convenient measure: λᵥ ≈ 0.4 is hydrostatic (open, connected to surface); λᵥ → 1.0 is lithostatic (sealed compartment where fluid pressure approaches overburden pressure). Evidence from deforming crust shows that fluid pressures commonly exceed hydrostatic at depth, especially within fault zones.
+:::
+
+---
+
+### Geological evidence base
+
+A key strength of the paper is that each mechanical argument is anchored in specific field observations. Sibson draws on three main lines of evidence:
+
+**Hydrothermal vein systems — volume and texture**
+
+- The sheer **volume** of quartz in fault-hosted vein systems demands massive fluid flux. The Mother Lode system (Sierra Nevada foothills) contains vein quartz in quantities requiring passage of ~10⁸ m³ of aqueous fluid per kilometre of fault strike — equivalent to flushing a supergiant oil field through the fault
+- Vein **textures** record incremental deposition (crack-seal microstructures, ribbon textures suggesting hundreds of opening events) → fluid flow was episodic and repeated, not a single pulse or steady-state seepage
+- Veins hosted in **reverse faults** at greenschist facies conditions (~10 ± 5 km depth) show a characteristic geometry: flat-lying extension vein arrays (inferred as pre-failure hydrofracture dilatancy) cross-cut in mutual relationships by steep fault-parallel veins (inferred as post-failure discharge conduits). This cross-cutting geometry is direct structural evidence for the valve cycle — the same fault alternated between sealed overpressured reservoir and open discharge pathway
+
+**Post-seismic hydrological observations**
+
+- The **1983 M7.3 Borah Peak, Idaho** earthquake ruptured a range-bounding normal fault and was followed by ~0.3 km³ of fluid discharge over several months, including post-seismic fountaining from fissures striking parallel to the rupture trace. The discharge pattern and volume are consistent with mean-stress-driven expulsion from the dilating hanging wall of a normal fault — a rare modern dataset linking seismicity directly to fluid flux
+
+**Fault weakness — the San Andreas**
+
+- Heat flow surveys show no frictional heat anomaly centred on the San Andreas, implying time-averaged shear resistance <20 MPa — far below what laboratory friction coefficients (μₛ ≈ 0.75) would predict for the known normal stresses
+- Stress orientation data (borehole breakouts, focal mechanisms) show the fault lies at 65–85° to the regional σ₁ — mechanically misoriented for reactivation under any reasonable stress state without elevated fluid pressure
+- These two independent observations together — anomalous weakness *and* geometric misorientation — make near-lithostatic fluid pressure the most parsimonious explanation
+
+::: {.callout-note}
+## A note on the evidence
+Sibson is explicit that his approach is semi-quantitative: the constitutive laws for dilatancy mechanisms are not fully resolved, and the critical parameters (permeability, fluid volume, constitutive relations) are poorly constrained. The geological evidence motivates the models, but the models are not uniquely determined by the observations. This is an honest and useful caveat to keep in mind.
+:::
+
+---
+
+### Key themes
+
+**1. Stress field controls permeability geometry (static effects)**
+
+The orientation of the stress field determines which fractures, faults, and stylolites form — and therefore which directions fluids can move:
+
+- **Extension fractures** open perpendicular to σ₃, providing conduits parallel to σ₁
+- **Faults (Coulomb shears)** form at ~20–30° to σ₁ and can be permeable immediately post-rupture, though permeability is short-lived due to rapid hydrothermal sealing
+- **Stylolites** (pressure-solution seams) form perpendicular to σ₁ and act as barriers to flow
+- In layered rocks (e.g. sandstone–shale sequences), tectonic regime determines whether bedding-parallel or cross-bedding permeability dominates:
+  - Compressional regime: bedding-parallel flow enhanced, trans-bedding inhibited
+  - Extensional regime: trans-bedding (vertical) flow enhanced
+
+**Hill fault/fracture meshes** — interlocking networks of shear and extension fractures — act as particularly efficient fluid conduits. The Mother Lode gold–quartz vein system of California is a classic example: the volume of quartz deposited implies passage of ~10⁸ m³ of aqueous fluid per km of fault strike.
+
+---
+
+**2. Permeability in fault zones is transient, not permanent**
+
+There is continuous competition between:
+
+- **Permeability creation**: fracturing at rupture (freshly failed faults are highly permeable)
+- **Permeability destruction**: hydrothermal precipitation, clay-rich gouge, pressure-solution creep — all acting rapidly to reseal fractures
+
+This means fluid flow through faults is inherently **episodic**. Constant-permeability models cannot account for the observed volumes of hydrothermal vein material.
+
+---
+
+**3. The earthquake cycle drives episodic fluid redistribution**
+
+Three distinct mechanisms operate at different stages of the seismic cycle:
+
+**Dilatancy pumping** (pre- and post-seismic)
+
+- As shear stress builds during fault loading, microcracks open → rock volume increases → fluids drawn toward the fault
+- Post-failure, shear stress drops and cracks close → fluids expelled
+- Multiple dilatancy types are possible (Table 1 in paper), with different stress dependencies; their relative importance remains debated
+- Effect is more pronounced around normal and strike-slip faults than thrust faults
+
+**Suction pumping at dilational jogs and bends** (co- and post-seismic)
+
+- Real fault traces are irregular; a rupture propagating along a fault encounters bends and jogs
+- At **dilational jogs/bends**: mean stress drops abruptly as the rupture tip passes → local fluid pressure drops below ambient → fluids drawn in rapidly
+- These sites act as **suction pumps** and are favoured locations for aftershock activity, hydrothermal mineralisation, and brecciation
+- The 1983 M7.3 Borah Peak, Idaho earthquake was followed by ~0.3 km³ fluid discharge over several months, including post-seismic fountaining from fissures along the rupture trace — a well-documented example
+
+**Fault-valve action** (discharge from overpressured crust)
+
+- In overpressured regions (λᵥ → 1), the fault zone acts as a seal between high-pressure fluid below and near-hydrostatic pressure above
+- When tectonic loading drives the fault to failure, rupture **breaches the seal** → rapid upward fluid discharge along the transiently permeable fault
+- Hydrothermal precipitation rapidly re-seals the fault; fluid pressure rebuilds; cycle repeats (Fig. 6)
+- This process is favoured in **reverse/thrust fault systems** (compressional regimes)
+- Explains the formation of **mesothermal gold–quartz lodes** hosted in steep reverse faults: flat-lying extension vein arrays (hydrofracture dilatancy pre-failure) cross-cut by steep fault-veins (discharge conduits post-failure)
+
+---
+
+**4. Implications for fault strength**
+
+The San Andreas Fault presents a long-standing paradox: it lies at 65–85° to the regional σ₁, making it mechanically unfavourable for reactivation. Heat flow data suggest its time-averaged frictional shear resistance is <20 MPa — far below what standard friction coefficients would predict. Fluid overpressures approaching lithostatic are the most plausible explanation for this anomalous weakness. This points to fault zones as potential migratory conduits for large fluid volumes, not isolated sealed compartments.
+
+---
 
 ### Why it matters for ERG
-- Fluid pressure changes can trigger failure
-- Transient permeability during seismicity
-- Relevance to induced seismicity and reservoir systems
 
+- **Induced and triggered seismicity**: injecting fluid raises Pf → lowers σ'ₙ → existing faults move closer to failure. The same logic applies to co-seismic fluid redistribution triggering remote aftershocks
+- **Fault strength**: near-lithostatic fluid pressure is the leading explanation for "weak" faults like the San Andreas; stress and fluid pressure are inseparable in fault mechanics
+- **Hydrothermal mineralisation**: mesothermal gold deposits (including Lachlan Fold Belt examples) are essentially fossilised fault-valve systems — structural position relative to the stress field is a first-order exploration guide
+- **Rupture nucleation and recurrence**: fluid pressure cycling tied to fault-valve action makes both the timing and location of rupture time-dependent, with fault strength reaching a minimum just before failure
 
 ---
 
@@ -75,9 +199,10 @@ allowfullscreen>
 
 ### Discussion questions
 
-1. What observations would indicate a fault-valve cycle?
-2. How important is near-lithostatic fluid pressure for earthquake nucleation?
-3. How would this model appear in modern seismic + pressure datasets?
+1. Sibson argues that fluid flow in fault zones is fundamentally episodic rather than steady-state. What geological evidence would you look for to distinguish between these two modes in the rock record?
+2. The fault-valve model predicts that rupture on a reverse fault should be accompanied by upward fluid discharge and rapid hydrothermal sealing. Can you think of any modern seismic sequences where this signature has (or hasn't) been observed?
+3. Fluid overpressure is proposed as the explanation for the anomalous weakness of the San Andreas Fault. What are the alternatives, and is there a way to test between them?
+4. The paper was written in 1992. Which of the three fluid redistribution mechanisms (dilatancy pumping, suction pumping, fault-valve action) do you think has received the most support from subsequent work, and why?
 
 ### Discussion (via GitHub)
 
