@@ -31,130 +31,80 @@ Crustal stress controls both *where* fluids can flow (permeability geometry) and
 ### Background: a brief stress primer
 
 ::: {.callout-note collapse="true"}
-## What is stress, and why do principal stresses matter?
+## Key concepts
 
-**Stress** is force per unit area acting inside a rock. At any point in the crust, we can describe the full stress state using three **principal stresses** — mutually perpendicular axes along which there is no shear, only compression (or tension):
+The crust is described by three **principal stresses** (σ₁ ≥ σ₂ ≥ σ₃). Their orientations define the tectonic regime (thrust: σ₁ horizontal; normal: σ₁ vertical; strike-slip: σ₁ and σ₃ horizontal). On a fault plane these resolve into normal stress σₙ (clamping) and shear stress τ (driving slip).
 
-| Symbol | Name | Meaning |
-|--------|------|---------|
-| σ₁ | Greatest principal stress | Maximum compression |
-| σ₂ | Intermediate principal stress | |
-| σ₃ | Least principal stress | Minimum compression (or maximum tension) |
+**Effective stress**: pore fluid pressure Pf directly reduces the clamping force — σ'ₙ = σₙ − Pf — so fault strength becomes:
 
-Their orientations define the **tectonic regime**:
+$$\tau_r = C + \mu_s(\sigma_n - P_f)$$
 
-- **Thrust/compressional**: σ₁ horizontal, σ₃ vertical — crust being squeezed horizontally
-- **Normal/extensional**: σ₁ vertical, σ₃ horizontal — crust being pulled apart
-- **Strike-slip**: σ₁ and σ₃ both horizontal, σ₂ vertical
-
-On a fault plane, the principal stresses resolve into:
-
-- **Normal stress** (σₙ) — acting perpendicular to the fault surface, clamping it shut
-- **Shear stress** (τ) — acting parallel to the fault, driving slip
-
-A fault slips when shear stress exceeds frictional resistance. The critical role of fluids is that **pore fluid pressure (Pf) directly reduces the effective normal stress**:
-
-$$
-\sigma'_n = \sigma_n - P_f
-$$
-
-Higher fluid pressure → lower effective clamping force → fault fails at lower differential stress. This is the Hubbert–Rubey concept (1959), formalised in a Coulomb friction criterion:
-
-$$
-\tau_r = C + \mu_s(\sigma_n - P_f)
-$$
-
-where C is cohesion and μₛ ≈ 0.75 is the friction coefficient. The dimensionless **pore-fluid factor** λᵥ = Pf/σᵥ provides a convenient measure: λᵥ ≈ 0.4 is hydrostatic (open, connected to surface); λᵥ → 1.0 is lithostatic (sealed compartment where fluid pressure approaches overburden pressure). Evidence from deforming crust shows that fluid pressures commonly exceed hydrostatic at depth, especially within fault zones.
+The **pore-fluid factor** λᵥ = Pf/σᵥ measures overpressure: λᵥ ≈ 0.4 hydrostatic; λᵥ → 1.0 lithostatic (sealed compartment). Raising Pf shifts the Mohr circle left toward failure without changing its size.
 :::
+
+---
+
+### Dilatancy primer
+
+**Dilatancy** is volume increase under increasing *differential* stress — a fundamentally deviatoric phenomenon, not isotropic loading. As shear stress builds, microcracks open perpendicular to σ₃; at ~50–80% of failure stress, crack volume grows faster than elastic compaction, so the rock swells slightly under compression. A dilating zone that drains slowly develops transient **underpressure**, drawing fluids in; post-failure crack closure expels them.
+
+This was the basis of the **dilatancy-diffusion hypothesis** (Nur 1972; Scholz et al. 1973) and Sibson's own **seismic pumping** model (1975): interseismic dilatancy draws fluids toward the fault; fluid diffusion back in triggers failure; post-seismic crack closure expels fluids upward. The model predicted Vp/Vs anomalies before earthquakes. It failed — it requires τ > 100 MPa across a broad rock volume, far above likely crustal stress levels, and stress perturbations decay too rapidly with distance (~1/r) to sustain regional dilatancy. What survives is a geometrically localised version: sharp mean-stress drops at **dilational jogs and bends** during rupture propagation (see Key Theme 3).
 
 ---
 
 ### Geological evidence base
 
-A key strength of the paper is that each mechanical argument is anchored in specific field observations. Sibson draws on three main lines of evidence:
+**Hydrothermal vein systems**
 
-**Hydrothermal vein systems — volume and texture**
+- **Volume**: Mother Lode (Sierra Nevada) requires >10⁸ m³ fluid/km fault strike to deposit the observed quartz — a supergiant oil field's worth of water per kilometre
+- **Texture**: crack-seal microstructures and ribbon veins record hundreds of episodic opening events, not steady flow
+- **Geometry**: flat extension vein arrays (pre-failure hydrofracture) cross-cut by steep fault-veins (post-failure discharge conduits) — direct structural record of the valve cycle
 
-- The sheer **volume** of quartz in fault-hosted vein systems demands massive fluid flux. The Mother Lode system (Sierra Nevada foothills) contains vein quartz in quantities requiring passage of ~10⁸ m³ of aqueous fluid per kilometre of fault strike — equivalent to flushing a supergiant oil field through the fault
-- Vein **textures** record incremental deposition (crack-seal microstructures, ribbon textures suggesting hundreds of opening events) → fluid flow was episodic and repeated, not a single pulse or steady-state seepage
-- Veins hosted in **reverse faults** at greenschist facies conditions (~10 ± 5 km depth) show a characteristic geometry: flat-lying extension vein arrays (inferred as pre-failure hydrofracture dilatancy) cross-cut in mutual relationships by steep fault-parallel veins (inferred as post-failure discharge conduits). This cross-cutting geometry is direct structural evidence for the valve cycle — the same fault alternated between sealed overpressured reservoir and open discharge pathway
+**Post-seismic hydrology**
 
-**Post-seismic hydrological observations**
-
-- The **1983 M7.3 Borah Peak, Idaho** earthquake ruptured a range-bounding normal fault and was followed by ~0.3 km³ of fluid discharge over several months, including post-seismic fountaining from fissures striking parallel to the rupture trace. The discharge pattern and volume are consistent with mean-stress-driven expulsion from the dilating hanging wall of a normal fault — a rare modern dataset linking seismicity directly to fluid flux
+- Borah Peak 1983 (M7.3): ~0.3 km³ fluid discharged over months post-rupture, including surface fountaining along the rupture trace
 
 **Fault weakness — the San Andreas**
 
-- Heat flow surveys show no frictional heat anomaly centred on the San Andreas, implying time-averaged shear resistance <20 MPa — far below what laboratory friction coefficients (μₛ ≈ 0.75) would predict for the known normal stresses
-- Stress orientation data (borehole breakouts, focal mechanisms) show the fault lies at 65–85° to the regional σ₁ — mechanically misoriented for reactivation under any reasonable stress state without elevated fluid pressure
-- These two independent observations together — anomalous weakness *and* geometric misorientation — make near-lithostatic fluid pressure the most parsimonious explanation
+- No heat-flow anomaly → time-averaged shear resistance <20 MPa (far below Byerlee prediction)
+- Fault at 65–85° to σ₁ → mechanically misoriented; both observations independently require near-lithostatic Pf
+
+**Extension veins as fluid pressure gauges**
+
+- Vertical veins → Pf > σ₃ (horizontal stress); flat-lying veins → Pf > σᵥ (near-lithostatic)
+- Panasqueira, Portugal: flat vein array 4 × 3 km, 1 km deep — requires seal tensile strength ~10–20 MPa
+- **Caveat**: no extension veins ≠ no overpressure — on a well-oriented cohesionless fault, reshear always occurs before hydraulic fracturing
 
 ::: {.callout-note}
 ## A note on the evidence
-Sibson is explicit that his approach is semi-quantitative: the constitutive laws for dilatancy mechanisms are not fully resolved, and the critical parameters (permeability, fluid volume, constitutive relations) are poorly constrained. The geological evidence motivates the models, but the models are not uniquely determined by the observations. This is an honest and useful caveat to keep in mind.
+Sibson is explicit that constitutive laws for dilatancy are unresolved and critical parameters are poorly constrained. The geological evidence motivates the models but does not uniquely determine them.
 :::
 
 ---
 
 ### Key themes
 
-**1. Stress field controls permeability geometry (static effects)**
+**1. Stress field controls permeability geometry**
 
-The orientation of the stress field determines which fractures, faults, and stylolites form — and therefore which directions fluids can move:
-
-- **Extension fractures** open perpendicular to σ₃, providing conduits parallel to σ₁
-- **Faults (Coulomb shears)** form at ~20–30° to σ₁ and can be permeable immediately post-rupture, though permeability is short-lived due to rapid hydrothermal sealing
-- **Stylolites** (pressure-solution seams) form perpendicular to σ₁ and act as barriers to flow
-- In layered rocks (e.g. sandstone–shale sequences), tectonic regime determines whether bedding-parallel or cross-bedding permeability dominates:
-  - Compressional regime: bedding-parallel flow enhanced, trans-bedding inhibited
-  - Extensional regime: trans-bedding (vertical) flow enhanced
-
-**Hill fault/fracture meshes** — interlocking networks of shear and extension fractures — act as particularly efficient fluid conduits. The Mother Lode gold–quartz vein system of California is a classic example: the volume of quartz deposited implies passage of ~10⁸ m³ of aqueous fluid per km of fault strike.
+- Extension fractures (⊥ σ₃) → conduits; faults (~20–30° to σ₁) → transiently permeable post-rupture; stylolites (⊥ σ₁) → barriers
+- In layered sequences: compression enhances bedding-parallel flow; extension enhances cross-bedding (vertical) flow
+- **Hill fault/fracture meshes** — interlocking shear + extension fractures — are the most efficient conduits; the Mother Lode vein system is the classic example
 
 ---
 
-**2. Permeability in fault zones is transient, not permanent**
+**2. Fault permeability is transient**
 
-There is continuous competition between:
-
-- **Permeability creation**: fracturing at rupture (freshly failed faults are highly permeable)
-- **Permeability destruction**: hydrothermal precipitation, clay-rich gouge, pressure-solution creep — all acting rapidly to reseal fractures
-
-This means fluid flow through faults is inherently **episodic**. Constant-permeability models cannot account for the observed volumes of hydrothermal vein material.
+Continuous competition between fracture creation (rupture) and destruction (hydrothermal sealing, gouge, pressure solution) makes fluid flow inherently **episodic** — constant-permeability models cannot account for observed vein volumes.
 
 ---
 
-**3. The earthquake cycle drives episodic fluid redistribution**
+**3. The earthquake cycle drives fluid redistribution — three mechanisms**
 
-Three distinct mechanisms operate at different stages of the seismic cycle:
+**Dilatancy pumping** (pre/post-seismic): differential stress loading opens microcracks → fluids drawn in; post-failure crack closure → fluids expelled. Effect is larger for normal/strike-slip (load-weakening) than thrust faults (load-strengthening).
 
-**Dilatancy pumping** (pre- and post-seismic)
+**Suction pumping at dilational jogs** (co/post-seismic): irregular fault geometry produces abrupt mean-stress drops at dilational bends during rupture propagation → rapid fluid influx. Favoured sites for aftershocks and mineralisation.
 
-- As shear stress builds during fault loading, microcracks open → rock volume increases → fluids drawn toward the fault
-- Post-failure, shear stress drops and cracks close → fluids expelled
-- Multiple dilatancy types are possible (Table 1 in paper), with different stress dependencies; their relative importance remains debated
-- Effect is more pronounced around normal and strike-slip faults than thrust faults
-
-**Suction pumping at dilational jogs and bends** (co- and post-seismic)
-
-- Real fault traces are irregular; a rupture propagating along a fault encounters bends and jogs
-- At **dilational jogs/bends**: mean stress drops abruptly as the rupture tip passes → local fluid pressure drops below ambient → fluids drawn in rapidly
-- These sites act as **suction pumps** and are favoured locations for aftershock activity, hydrothermal mineralisation, and brecciation
-- The 1983 M7.3 Borah Peak, Idaho earthquake was followed by ~0.3 km³ fluid discharge over several months, including post-seismic fountaining from fissures along the rupture trace — a well-documented example
-
-**Fault-valve action** (discharge from overpressured crust)
-
-- In overpressured regions (λᵥ → 1), the fault zone acts as a seal between high-pressure fluid below and near-hydrostatic pressure above
-- When tectonic loading drives the fault to failure, rupture **breaches the seal** → rapid upward fluid discharge along the transiently permeable fault
-- Hydrothermal precipitation rapidly re-seals the fault; fluid pressure rebuilds; cycle repeats (Fig. 6)
-- This process is favoured in **reverse/thrust fault systems** (compressional regimes)
-- Explains the formation of **mesothermal gold–quartz lodes** hosted in steep reverse faults: flat-lying extension vein arrays (hydrofracture dilatancy pre-failure) cross-cut by steep fault-veins (discharge conduits post-failure)
-
----
-
-**4. Implications for fault strength**
-
-The San Andreas Fault presents a long-standing paradox: it lies at 65–85° to the regional σ₁, making it mechanically unfavourable for reactivation. Heat flow data suggest its time-averaged frictional shear resistance is <20 MPa — far below what standard friction coefficients would predict. Fluid overpressures approaching lithostatic are the most plausible explanation for this anomalous weakness. This points to fault zones as potential migratory conduits for large fluid volumes, not isolated sealed compartments.
+**Fault-valve action** (compressional regimes): sealed overpressured compartment (λᵥ → 1) → rupture breaches seal → rapid upward discharge → hydrothermal self-sealing → pressure rebuilds → repeat. Explains mesothermal Au-quartz lodes in steep reverse faults.
 
 ---
 
@@ -167,6 +117,111 @@ The San Andreas Fault presents a long-standing paradox: it lies at 65–85° to 
 
 ---
 
+
+### From the talk: additional themes
+
+**Fault lockup and the reactivation angle**
+
+At θᴿ ≈ 60° to σ₁ (the **frictional lockup angle** for μ = 0.75), a fault cannot slip unless Pf reaches σ₃. The dip distribution of active reverse fault ruptures peaks at ~30° and extends to ~55–60°, with the high-dip cases implying λᵥ ~ 0.8–0.9. This is especially evident in northern Honshu, where compressional inversion forces rupture on inherited near-lockup normal faults — bright-spot reflectors and high-conductivity zones near hypocentres are interpreted as overpressured fluid arrays. Ninety percent of global seismic moment is released on subduction megathrusts where λᵥ ≥ 0.9–0.95; the overpressured fault is the global norm.
+
+![Global dip distribution for reverse-slip ruptures (histogram, top) and the differential stress required for reactivation as a function of dip angle at different pore-fluid factors λᵥ (curves, bottom). Reactivation is easiest at ~30° (optimal); the lockup angle (~60°) is where the hydrostatic curve (λᵥ = 0.4) goes to infinity. The NE Honshu cluster at 45–60° dip requires λᵥ ≥ 0.8–0.9. From [Sibson, GNS Science lecture (YouTube)](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s).](assets/figures/lockup.png){width=80% fig-align="center"}
+
+---
+
+**Load strengthening vs load weakening**
+
+Thrust loading increases mean stress as shear stress rises → *load-strengthening* (frictional resistance grows during loading; failure is abrupt). Normal fault loading decreases mean stress → *load-weakening* (resistance falls as loading proceeds; failure more gradual). This partly explains why foreshock sequences are more common around normal fault earthquakes, and why reverse fault ruptures tend to release more stored strain energy.
+
+---
+
+**Fault glass and thermal pressurisation**
+
+Frictional heating at seismic slip rates should melt all faults. The Outer Hebrides Thrust has pseudotachylyte; the Moine Thrust — studied exhaustively for over a century — has none. In fluid-saturated rocks, rapid pore-pressure rise during slip (**thermal pressurisation**) quenches frictional resistance before melt temperatures are reached. Pseudotachylyte may mark *dry*, immature fault zones rather than anomalously high stress.
+
+---
+
+## Interactive: Mohr circle explorer
+
+Use the sliders to change the principal stresses and pore fluid pressure. The Mohr circle shifts left as fluid pressure increases — watch how it approaches the failure envelope without changing size (the size depends only on differential stress, σ₁ − σ₃).
+
+```{ojs}
+//| echo: false
+
+viewof sigma1 = Inputs.range([20, 300], {value: 150, step: 1, label: "σ₁ — greatest principal stress (MPa)"})
+viewof sigma3 = Inputs.range([0, 200], {value: 50, step: 1, label: "σ₃ — least principal stress (MPa)"})
+viewof pf     = Inputs.range([0, 200], {value: 20, step: 1, label: "Pf — pore fluid pressure (MPa)"})
+```
+
+```{ojs}
+//| echo: false
+
+{
+  const C  = 10;   // cohesion MPa
+  const mu = 0.75; // friction coefficient
+
+  // Effective stresses
+  const s1e = sigma1 - pf;
+  const s3e = sigma3 - pf;
+  const centre = (s1e + s3e) / 2;
+  const radius = (s1e - s3e) / 2;
+
+  // Failure: Mohr circle tangent to envelope when radius >= perpendicular distance
+  const distToEnvelope = (C + mu * centre) / Math.sqrt(mu * mu + 1);
+  const failed = radius >= distToEnvelope;
+
+  const xMax = Math.max(sigma1 + 20, 320);
+  const xMin = Math.min(-20, s3e - 20);
+
+  const circle = Array.from({length: 361}, (_, i) => {
+    const theta = 2 * Math.PI * i / 360;
+    return {sn: centre + radius * Math.cos(theta), tau: radius * Math.sin(theta)};
+  });
+
+  const envelope = [xMin, xMax].map(x => ({sn: x, tau: C + mu * x}));
+
+  const col = failed ? "crimson" : "steelblue";
+
+  return Plot.plot({
+    width: 680,
+    height: 360,
+    marginLeft: 55,
+    marginBottom: 45,
+    x: {label: "Normal stress σₙ (MPa)", domain: [xMin, xMax]},
+    y: {label: "Shear stress τ (MPa)", domain: [0, radius + 60]},
+    marks: [
+      Plot.ruleY([0], {stroke: "#aaa"}),
+      Plot.ruleX([0], {stroke: "#aaa", strokeDasharray: "4,3"}),
+      Plot.line(envelope, {x: "sn", y: "tau", stroke: "tomato", strokeWidth: 2, strokeDasharray: "6,3"}),
+      Plot.text([{sn: xMax * 0.75, tau: C + mu * xMax * 0.75 + 7}], {
+        x: "sn", y: "tau", text: () => `τ = ${C} + 0.75 σₙ`, fill: "tomato", fontSize: 11
+      }),
+      Plot.line(circle, {x: "sn", y: "tau", stroke: col, strokeWidth: 2.5}),
+      Plot.tickX([s3e, s1e], {stroke: col, strokeWidth: 2}),
+      Plot.text([{sn: s3e, tau: 0, text: "σ₃ʼ"}, {sn: s1e, tau: 0, text: "σ₁ʼ"}], {
+        x: "sn", y: "tau", text: "text", dy: 14, fontSize: 12, fill: col
+      }),
+      Plot.dot([{sn: centre, tau: 0}], {fill: col, r: 3}),
+      Plot.text([{sn: centre, tau: radius + 18}], {
+        x: "sn", y: "tau",
+        text: () => failed ? "⚠ FAILURE" : "Stable",
+        fill: failed ? "crimson" : "green", fontWeight: "bold", fontSize: 13
+      })
+    ],
+    caption: `Effective stresses: σ₁ʼ = ${s1e} MPa, σ₃ʼ = ${s3e} MPa  |  Differential stress: ${(s1e - s3e).toFixed(0)} MPa  |  C = ${C} MPa, μ = ${mu}`
+  });
+}
+```
+
+### The 4T limit: shear vs extension failure
+
+Raising Pf moves the Mohr circle left. Which part of the failure envelope it hits first depends on the size of the circle — i.e. the differential stress:
+
+$$(\sigma_1 - \sigma_3) < 4T \;\Rightarrow\; \text{extension fracture (Mode I, perpendicular to } \sigma_3 \text{)}$$
+$$(\sigma_1 - \sigma_3) > 4T \;\Rightarrow\; \text{shear failure (Coulomb)}$$
+
+For typical crustal rocks T ≈ 5–15 MPa, so 4T ≈ 20–60 MPa. In a sandstone–shale sequence where T_sandstone > T_shale, the same differential stress can push shales into Coulomb shear while sandstones still satisfy the extension fracture condition — producing the interlocking fault/fracture mesh of shears and veins that acts as a highly efficient fluid conduit.
+
+---
 
 ## Session resources
 
@@ -186,9 +241,12 @@ The San Andreas Fault presents a long-standing paradox: it lies at 65–85° to 
 
 ### Media
 
+**R.H. Sibson — "Crustal stress, faulting and fluid flow" (GNS Science lecture)**
+[Watch on YouTube](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s) — cued to the fault mechanics section.
+
 <div class="ratio ratio-16x9">
 <iframe src="https://www.youtube.com/embed/XZWBhv7EjIY?start=1200"
-title="YouTube video"
+title="R.H. Sibson — Crustal stress, faulting and fluid flow (GNS Science lecture)"
 allowfullscreen>
 </iframe>
 </div>
@@ -203,6 +261,7 @@ allowfullscreen>
 2. The fault-valve model predicts that rupture on a reverse fault should be accompanied by upward fluid discharge and rapid hydrothermal sealing. Can you think of any modern seismic sequences where this signature has (or hasn't) been observed?
 3. Fluid overpressure is proposed as the explanation for the anomalous weakness of the San Andreas Fault. What are the alternatives, and is there a way to test between them?
 4. The paper was written in 1992. Which of the three fluid redistribution mechanisms (dilatancy pumping, suction pumping, fault-valve action) do you think has received the most support from subsequent work, and why?
+5. Sibson argues that thrust faults are load-strengthening and normal faults are load-weakening. What observable differences in earthquake behaviour (foreshocks, aftershocks, stress drops, rupture style) would you predict from this asymmetry, and is there evidence for it?
 
 ### Discussion (via GitHub)
 
