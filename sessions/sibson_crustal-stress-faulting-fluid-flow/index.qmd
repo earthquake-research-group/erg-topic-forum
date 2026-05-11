@@ -1,7 +1,7 @@
 ---
 title: "Crustal stress, faulting and fluid flow"
 author: "Dan Sandiford"
-date: 2026-02-30
+date: 2026-06-01
 categories: [paper-discussion, fault-mechanics, crustal-stress, fluid-flow]
 bibliography: paper.bib
 nocite: '@*'
@@ -124,7 +124,7 @@ Continuous competition between fracture creation (rupture) and destruction (hydr
 
 At θᴿ ≈ 60° to σ₁ (the **frictional lockup angle** for μ = 0.75), a fault cannot slip unless Pf reaches σ₃. The dip distribution of active reverse fault ruptures peaks at ~30° and extends to ~55–60°, with the high-dip cases implying λᵥ ~ 0.8–0.9. This is especially evident in northern Honshu, where compressional inversion forces rupture on inherited near-lockup normal faults — bright-spot reflectors and high-conductivity zones near hypocentres are interpreted as overpressured fluid arrays. Ninety percent of global seismic moment is released on subduction megathrusts where λᵥ ≥ 0.9–0.95; the overpressured fault is the global norm.
 
-![Global dip distribution for reverse-slip ruptures (histogram, top) and the differential stress required for reactivation as a function of dip angle at different pore-fluid factors λᵥ (curves, bottom). Reactivation is easiest at ~30° (optimal); the lockup angle (~60°) is where the hydrostatic curve (λᵥ = 0.4) goes to infinity. The NE Honshu cluster at 45–60° dip requires λᵥ ≥ 0.8–0.9. From [Sibson, GNS Science lecture (YouTube)](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s).](assets/figures/lockup.png){width=80% fig-align="center"}
+![Global dip distribution for reverse-slip ruptures (histogram, top) and the differential stress required for reactivation as a function of dip angle at different pore-fluid factors λᵥ (curves, bottom). Reactivation is easiest at ~30° (optimal); the lockup angle (~60°) is where the hydrostatic curve (λᵥ = 0.4) goes to infinity. The NE Honshu cluster at 45–60° dip requires λᵥ ≥ 0.8–0.9. From [Sibson, Birch Lecture: T32A. Inside a Crustal Earthquake — the Rock Evidence, 2012 AGU Fall Meeting (YouTube)](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s).](assets/figures/lockup.png){width=80% fig-align="center"}
 
 ---
 
@@ -241,12 +241,12 @@ For typical crustal rocks T ≈ 5–15 MPa, so 4T ≈ 20–60 MPa. In a sandston
 
 ### Media
 
-**R.H. Sibson — "Crustal stress, faulting and fluid flow" (GNS Science lecture)**
+**R.H. Sibson — Birch Lecture: T32A. Inside a Crustal Earthquake — the Rock Evidence (2012 AGU Fall Meeting)**
 [Watch on YouTube](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s) — cued to the fault mechanics section.
 
 <div class="ratio ratio-16x9">
 <iframe src="https://www.youtube.com/embed/XZWBhv7EjIY?start=1200"
-title="R.H. Sibson — Crustal stress, faulting and fluid flow (GNS Science lecture)"
+title="R.H. Sibson — Birch Lecture: Inside a Crustal Earthquake — the Rock Evidence, 2012 AGU Fall Meeting"
 allowfullscreen>
 </iframe>
 </div>
