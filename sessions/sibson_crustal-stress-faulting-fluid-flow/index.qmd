@@ -124,7 +124,7 @@ Continuous competition between fracture creation (rupture) and destruction (hydr
 
 At θᴿ ≈ 60° to σ₁ (the **frictional lockup angle** for μ = 0.75), a fault cannot slip unless Pf reaches σ₃. The dip distribution of active reverse fault ruptures peaks at ~30° and extends to ~55–60°, with the high-dip cases implying λᵥ ~ 0.8–0.9. This is especially evident in northern Honshu, where compressional inversion forces rupture on inherited near-lockup normal faults — bright-spot reflectors and high-conductivity zones near hypocentres are interpreted as overpressured fluid arrays. Ninety percent of global seismic moment is released on subduction megathrusts where λᵥ ≥ 0.9–0.95; the overpressured fault is the global norm.
 
-![Global dip distribution for reverse-slip ruptures (histogram, top) and the differential stress required for reactivation as a function of dip angle at different pore-fluid factors λᵥ (curves, bottom). Reactivation is easiest at ~30° (optimal); the lockup angle (~60°) is where the hydrostatic curve (λᵥ = 0.4) goes to infinity. The NE Honshu cluster at 45–60° dip requires λᵥ ≥ 0.8–0.9. From [Sibson, Birch Lecture: T32A. Inside a Crustal Earthquake — the Rock Evidence, 2012 AGU Fall Meeting (YouTube)](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s).](assets/figures/lockup.png){width=80% fig-align="center"}
+![Global dip distribution for reverse-slip ruptures (histogram, top) and the differential stress required for reactivation as a function of dip angle at different pore-fluid factors λᵥ (curves, bottom). Reactivation is easiest at ~30° (optimal); the lockup angle (~60°) is where the hydrostatic curve (λᵥ = 0.4) goes to infinity. The NE Honshu cluster at 45–60° dip requires λᵥ ≥ 0.8–0.9. From [Sibson, Birch Lecture: T32A. Inside a Crustal Earthquake — the Rock Evidence, 2012 AGU Fall Meeting (YouTube)](https://www.youtube.com/watch?v=XZWBhv7EjIY&t=1200s).](assets/figures/lockup.png){width=45% fig-align="center"}
 
 ---
 
@@ -142,7 +142,7 @@ Frictional heating at seismic slip rates should melt all faults. The Outer Hebri
 
 ## Interactive: Mohr circle explorer
 
-Use the sliders to change the principal stresses and pore fluid pressure. The Mohr circle shifts left as fluid pressure increases — watch how it approaches the failure envelope without changing size (the size depends only on differential stress, σ₁ − σ₃).
+Use the sliders to change the principal stresses, pore fluid pressure, and the rock's tensile strength T and cohesion C. The failure envelope is a *composite* curve: a Coulomb line τ = C + μσₙ at high σₙ that bends through a parabolic cap to the apex at (−T, 0). Failure occurs when the Mohr circle becomes tangent to this envelope, and **where** the tangent point lies tells you the failure mode — positive σₙ → shear, negative σₙ → hybrid shear–tensile, exactly at the apex → pure Mode I tension. The composite envelope is only internally consistent when **C > μT**; set C = 0 to see the inconsistency discussed below.
 
 ```{ojs}
 //| echo: false
@@ -150,13 +150,16 @@ Use the sliders to change the principal stresses and pore fluid pressure. The Mo
 viewof sigma1 = Inputs.range([20, 300], {value: 150, step: 1, label: "σ₁ — greatest principal stress (MPa)"})
 viewof sigma3 = Inputs.range([0, 200], {value: 50, step: 1, label: "σ₃ — least principal stress (MPa)"})
 viewof pf     = Inputs.range([0, 200], {value: 20, step: 1, label: "Pf — pore fluid pressure (MPa)"})
+viewof tval   = Inputs.range([0, 40], {value: 10, step: 0.5, label: "T — tensile strength (MPa)"})
+viewof cval   = Inputs.range([0, 40], {value: 10, step: 0.5, label: "C — cohesion (MPa)"})
 ```
 
 ```{ojs}
 //| echo: false
 
 {
-  const C  = 10;   // cohesion MPa
+  const C  = cval;
+  const T  = tval;
   const mu = 0.75; // friction coefficient
 
   // Effective stresses
@@ -165,49 +168,130 @@ viewof pf     = Inputs.range([0, 200], {value: 20, step: 1, label: "Pf — pore 
   const centre = (s1e + s3e) / 2;
   const radius = (s1e - s3e) / 2;
 
-  // Failure: Mohr circle tangent to envelope when radius >= perpendicular distance
-  const distToEnvelope = (C + mu * centre) / Math.sqrt(mu * mu + 1);
-  const failed = radius >= distToEnvelope;
+  // Composite failure envelope:
+  //   - Coulomb line  τ = C + μσₙ  for σₙ ≥ σ_join
+  //   - Parabolic cap τ² = a(σₙ + T)  for -T ≤ σₙ < σ_join (apex at (-T, 0))
+  // Smooth (C¹) join requires  a = 4μ(C − μT), valid only when C > μT.
+  const a       = 4 * mu * (C - mu * T);
+  const ok      = a > 0;                       // envelope is internally consistent
+  const sigJoin = ok ? a / (4 * mu * mu) - T : null;
+
+  // Closest envelope point to circle centre (centre, 0); failure = (distance ≤ radius).
+  // Coulomb branch candidate
+  const snCoul = (centre - mu * C) / (1 + mu * mu);
+  const dCoul  = (C + mu * centre) / Math.sqrt(1 + mu * mu);
+
+  let tSn, tTau, tDist;
+  if (!ok) {
+    // Degenerate: no parabolic cap. Coulomb line clipped at τ = 0 (σₙ = -C/μ).
+    if (snCoul >= -C / mu) {
+      tSn  = snCoul;
+      tTau = Math.max(0, C + mu * snCoul);
+      tDist = dCoul;
+    } else {
+      tSn  = -C / mu;
+      tTau = 0;
+      tDist = Math.abs(centre - tSn);
+    }
+  } else if (snCoul >= sigJoin) {
+    tSn  = snCoul;
+    tTau = C + mu * snCoul;
+    tDist = dCoul;
+  } else {
+    // Parabolic branch
+    const cand = centre - a / 2;
+    if (cand >= -T) {
+      tSn  = cand;
+      tTau = Math.sqrt(a * (cand + T));
+      tDist = Math.sqrt(a * Math.max(0, centre + T - a / 4));
+    } else {
+      // Closest point on parabola arc is its apex (-T, 0)
+      tSn  = -T;
+      tTau = 0;
+      tDist = Math.abs(centre - (-T));
+    }
+  }
+
+  const failed = tDist <= radius;
+
+  let mode, col, labelCol;
+  if (!failed)                  { mode = "stable";                    col = "steelblue";  labelCol = "seagreen"; }
+  else if (tSn > 0)             { mode = "⚠ shear failure";           col = "crimson";    labelCol = "crimson"; }
+  else if (tSn > -T + 1e-6)     { mode = "⚠ hybrid (shear–tensile)";  col = "purple";     labelCol = "purple"; }
+  else                          { mode = "⚠ tensile failure";         col = "darkorange"; labelCol = "darkorange"; }
 
   const xMax = Math.max(sigma1 + 20, 320);
-  const xMin = Math.min(-20, s3e - 20);
+  const xMin = Math.min(-T - 20, s3e - 20, -20);
 
   const circle = Array.from({length: 361}, (_, i) => {
     const theta = 2 * Math.PI * i / 360;
     return {sn: centre + radius * Math.cos(theta), tau: radius * Math.sin(theta)};
   });
 
-  const envelope = [xMin, xMax].map(x => ({sn: x, tau: C + mu * x}));
+  // Build envelope polyline for plotting
+  const envelopeData = [];
+  if (ok) {
+    const N = 60;
+    for (let i = 0; i <= N; i++) {
+      const sn = -T + (sigJoin - (-T)) * i / N;
+      envelopeData.push({sn, tau: Math.sqrt(a * (sn + T))});
+    }
+    envelopeData.push({sn: xMax, tau: C + mu * xMax});
+  } else {
+    // No tensile cap possible — Coulomb only, clipped at τ = 0
+    const startSn = Math.max(xMin, -C / mu);
+    envelopeData.push({sn: startSn, tau: Math.max(0, C + mu * startSn)});
+    envelopeData.push({sn: xMax, tau: C + mu * xMax});
+  }
 
-  const col = failed ? "crimson" : "steelblue";
+  const yMax = Math.max(radius + 60, 120);
 
   return Plot.plot({
     width: 680,
-    height: 360,
+    aspectRatio: 1,
     marginLeft: 55,
     marginBottom: 45,
     x: {label: "Normal stress σₙ (MPa)", domain: [xMin, xMax]},
-    y: {label: "Shear stress τ (MPa)", domain: [0, radius + 60]},
+    y: {label: "Shear stress τ (MPa)", domain: [0, yMax]},
     marks: [
       Plot.ruleY([0], {stroke: "#aaa"}),
       Plot.ruleX([0], {stroke: "#aaa", strokeDasharray: "4,3"}),
-      Plot.line(envelope, {x: "sn", y: "tau", stroke: "tomato", strokeWidth: 2, strokeDasharray: "6,3"}),
-      Plot.text([{sn: xMax * 0.75, tau: C + mu * xMax * 0.75 + 7}], {
-        x: "sn", y: "tau", text: () => `τ = ${C} + 0.75 σₙ`, fill: "tomato", fontSize: 11
+      // Failure envelope (continuous if consistent; warning style if not)
+      Plot.line(envelopeData, {
+        x: "sn", y: "tau",
+        stroke: ok ? "tomato" : "#bbb",
+        strokeWidth: 2,
+        strokeDasharray: ok ? "6,3" : "2,4"
       }),
+      Plot.text([{sn: xMax * 0.75, tau: C + mu * xMax * 0.75 + 7}], {
+        x: "sn", y: "tau", text: () => `τ = ${C} + ${mu} σₙ`,
+        fill: ok ? "tomato" : "#999", fontSize: 11
+      }),
+      // Inconsistency warning when C ≤ μT
+      ...(!ok ? [Plot.text([{sn: Math.min(0, (xMin + xMax)/2), tau: yMax * 0.88}], {
+        x: "sn", y: "tau",
+        text: () => `⚠ C ≤ μT (${C} ≤ ${(mu*T).toFixed(1)}) — no consistent tensile cap exists`,
+        fill: "tomato", fontSize: 11, fontWeight: "bold", textAnchor: "middle"
+      })] : []),
+      // Mohr circle
       Plot.line(circle, {x: "sn", y: "tau", stroke: col, strokeWidth: 2.5}),
       Plot.tickX([s3e, s1e], {stroke: col, strokeWidth: 2}),
       Plot.text([{sn: s3e, tau: 0, text: "σ₃ʼ"}, {sn: s1e, tau: 0, text: "σ₁ʼ"}], {
         x: "sn", y: "tau", text: "text", dy: 14, fontSize: 12, fill: col
       }),
       Plot.dot([{sn: centre, tau: 0}], {fill: col, r: 3}),
-      Plot.text([{sn: centre, tau: radius + 18}], {
+      // Tangent (failure) point on envelope
+      ...(failed ? [
+        Plot.dot([{sn: tSn, tau: tTau}], {fill: labelCol, r: 5, stroke: "white", strokeWidth: 1.5}),
+        Plot.ruleX([tSn], {stroke: labelCol, strokeWidth: 1, strokeDasharray: "2,3", y1: 0, y2: tTau})
+      ] : []),
+      Plot.text([{sn: centre, tau: Math.min(radius + 18, yMax - 8)}], {
         x: "sn", y: "tau",
-        text: () => failed ? "⚠ FAILURE" : "Stable",
-        fill: failed ? "crimson" : "green", fontWeight: "bold", fontSize: 13
+        text: () => mode,
+        fill: labelCol, fontWeight: "bold", fontSize: 13
       })
     ],
-    caption: `Effective stresses: σ₁ʼ = ${s1e} MPa, σ₃ʼ = ${s3e} MPa  |  Differential stress: ${(s1e - s3e).toFixed(0)} MPa  |  C = ${C} MPa, μ = ${mu}`
+    caption: `σ₁ʼ = ${s1e} MPa, σ₃ʼ = ${s3e} MPa  |  Differential: ${(s1e - s3e).toFixed(0)} MPa  |  C = ${C}, T = ${T}, μ = ${mu}  |  4T = ${(4*T).toFixed(0)} MPa${failed ? `  |  Tangent at σₙ = ${tSn.toFixed(1)} MPa` : ""}`
   });
 }
 ```
@@ -220,6 +304,37 @@ $$(\sigma_1 - \sigma_3) < 4T \;\Rightarrow\; \text{extension fracture (Mode I, p
 $$(\sigma_1 - \sigma_3) > 4T \;\Rightarrow\; \text{shear failure (Coulomb)}$$
 
 For typical crustal rocks T ≈ 5–15 MPa, so 4T ≈ 20–60 MPa. In a sandstone–shale sequence where T_sandstone > T_shale, the same differential stress can push shales into Coulomb shear while sandstones still satisfy the extension fracture condition — producing the interlocking fault/fracture mesh of shears and veins that acts as a highly efficient fluid conduit.
+
+::: {.callout-note}
+## Cohesion vs tensile strength: an internal-consistency condition
+
+The widget builds the envelope by joining a Coulomb branch τ = C + μσₙ smoothly (C¹) to a parabolic tensile cap τ² = a(σₙ + T) with its apex at (−T, 0). Matching value and slope at the join gives
+
+$$ a = 4\mu(C - \mu T) $$
+
+which is only positive — i.e., the cap exists — when **C > μT**. This is the geometrical content of the "cohesion vs tensile strength" question.
+
+Set **C = 0** in the widget: a goes non-positive, the cap is impossible, and the panel falls back to a bare Coulomb line through the origin (drawn faded with a warning). The rock is *self-inconsistent* — you have asked for a surface that resists no shear at zero σₙ but resists tension to −T. Geometrically, no smooth envelope can connect those two facts. The same problem appears whenever μT exceeds C: the cohesion-implied tensile intercept (−C/μ) sits *inside* the alleged tensile strength T, and the envelope's two ideas of "where tension fails" disagree.
+
+The physical resolution is that **cohesion and tensile strength describe different rock states**:
+
+- **Cohesionless Byerlee** (C = 0, τ = μσₙ) applies to *pre-existing faults* — the cohesion was destroyed by prior slip. Such a surface has, by assumption, no resistance to opening either: its tensile strength is also zero. There is no separate Mode I failure mode to assign.
+- **The 4T criterion** is implicitly an *intact-rock* criterion. Intact rock has both finite C and finite T (and they satisfy C > μT in practice), so the composite envelope above exists and the Mohr circle can become tangent to its parabolic cap at σₙ < 0. The (σ₁ − σ₃) < 4T threshold is just the condition for that tangent point to fall at the apex.
+
+So the apparent paradox is a category error: you cannot use Byerlee friction for the fault and *also* assign the same surface a Mode I tensile strength. In Sibson's framework the 4T criterion governs failure modes of the **wall rock surrounding a fault**, while the fault itself slides under cohesionless friction whenever the wall-rock stress state permits.
+:::
+
+::: {.callout-tip}
+## Why this matters for fracture stimulation (EGS, geothermal)
+
+Engineered geothermal and other reservoir stimulation projects try to *create* durable permeability by pushing the in-situ stress state into failure. Which part of the envelope the Mohr circle hits changes the engineering outcome dramatically:
+
+- **Tangent at the apex — pure Mode I, σ₁ − σ₃ ≲ 4T.** Fractures open perpendicular to σ₃ but close again the moment Pf drops, unless held open mechanically with **proppants** (sand, ceramic beads). This is the classic sand-fracturing regime in tight oil/gas.
+- **Tangent on the Coulomb leg, σ₁ − σ₃ ≫ 4T — pure shear.** The fault is held closed by compressive σₙ; aperture gain comes only from asperity-mismatch of rough surfaces sliding past one another ("shear dilation") and from damage in the wall rock. Pure shear on an ideally planar surface gives no permeability at all.
+- **Tangent on the parabolic cap — hybrid extensional-shear, σ₁ − σ₃ of order a few × T.** The fracture both opens (σₙ_t < 0) *and* slips (τ_t > 0). Shear offset registers rough surfaces against one another while they are still dilated, so an open aperture is locked in place — the fracture **self-props**. Anecdotally this is exactly why EGS operators tend to prefer hybrid-mode targets: permeability persists after injection stops with little or no need for proppant.
+
+The geological end-member is Sibson's mineralised hybrid extensional shear; the engineering target is the same physics on human timescales. Depth, in-situ stress ratio, and the Pf path all bear on which side of 4T you operate on, and small changes in any of them can walk you between regimes that need very different stimulation strategies.
+:::
 
 ---
 
