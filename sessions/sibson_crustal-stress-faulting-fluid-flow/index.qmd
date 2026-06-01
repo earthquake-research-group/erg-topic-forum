@@ -28,27 +28,25 @@ Crustal stress controls both *where* fluids can flow (permeability geometry) and
 
 ---
 
-### Background: a brief stress primer
+### Background: stress and dilatancy primer
 
 ::: {.callout-note collapse="true"}
 ## Key concepts
 
-The crust is described by three **principal stresses** (σ₁ ≥ σ₂ ≥ σ₃). Their orientations define the tectonic regime (thrust: σ₁ horizontal; normal: σ₁ vertical; strike-slip: σ₁ and σ₃ horizontal). On a fault plane these resolve into normal stress σₙ (clamping) and shear stress τ (driving slip).
+**Stress.** The crust is described by three **principal stresses** (σ₁ ≥ σ₂ ≥ σ₃). Their orientations define the tectonic regime (thrust: σ₁ horizontal; normal: σ₁ vertical; strike-slip: σ₁ and σ₃ horizontal). On a fault plane these resolve into normal stress σₙ (clamping) and shear stress τ (driving slip).
 
 **Effective stress**: pore fluid pressure Pf directly reduces the clamping force — σ'ₙ = σₙ − Pf — so fault strength becomes:
 
 $$\tau_r = C + \mu_s(\sigma_n - P_f)$$
 
 The **pore-fluid factor** λᵥ = Pf/σᵥ measures overpressure: λᵥ ≈ 0.4 hydrostatic; λᵥ → 1.0 lithostatic (sealed compartment). Raising Pf shifts the Mohr circle left toward failure without changing its size.
-:::
 
 ---
-
-### Dilatancy primer
 
 **Dilatancy** is volume increase under increasing *differential* stress — a fundamentally deviatoric phenomenon, not isotropic loading. As shear stress builds, microcracks open perpendicular to σ₃; at ~50–80% of failure stress, crack volume grows faster than elastic compaction, so the rock swells slightly under compression. A dilating zone that drains slowly develops transient **underpressure**, drawing fluids in; post-failure crack closure expels them.
 
 This was the basis of the **dilatancy-diffusion hypothesis** (Nur 1972; Scholz et al. 1973) and Sibson's own **seismic pumping** model (1975): interseismic dilatancy draws fluids toward the fault; fluid diffusion back in triggers failure; post-seismic crack closure expels fluids upward. The model predicted Vp/Vs anomalies before earthquakes. It failed — it requires τ > 100 MPa across a broad rock volume, far above likely crustal stress levels, and stress perturbations decay too rapidly with distance (~1/r) to sustain regional dilatancy. What survives is a geometrically localised version: sharp mean-stress drops at **dilational jogs and bends** during rupture propagation (see Key Theme 3).
+:::
 
 ---
 
