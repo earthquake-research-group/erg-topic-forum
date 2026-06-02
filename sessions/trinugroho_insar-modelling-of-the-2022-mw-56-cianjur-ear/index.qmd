@@ -1,5 +1,5 @@
 ---
-title: "InSAR Modelling of the 2022 Mw 5.6 Cianjur Earthquake, Indonesia"
+title: "InSAR-based Source modelling of the 2022 Mw 5.6 Cianjur Earthquake, Indonesia"
 author: "Trinugroho"
 date: 2026-03-02
 categories: [work-in-progress]
@@ -16,24 +16,24 @@ nocite: '@*'
 
 ### Abstract
 
-_Paste the paper abstract here._
+This talk will briefly introduces InSAR-based source modelling for the 2022 Mw 5.6 Cianjur earthquake—A moderate but destructive event associated with hidden fault system. It focuses on how coseismic surface deformation from spaceborne satellite data can be used to constrain fault geometry and rupture kinematics, and discuss current modelling results and tradeoffs.
 
 ---
 
 ## Presentation summary
 
 ### Takeaway
-- _One–three sentence plain-English takeaway._
+- A moderate earthquake can still be devastating when it ruptures a poorly mapped fault close to populous regions, and InSAR lets us estimate the fault geometry directly from the surface deformation pattern. For Cianjur, our current modelling suggests a rupture length around 6.5 to 7 km with a stable fault strike and near strike-slip motion, but slip magnitude and depth extent remain strongly non-unique.
 
 ### Key points
-- _Core concept_
-- _Key result / figure / equation_
-- _What controls the behaviour_
+- We model the observed InSAR line-of-sight deformation with an elastic dislocation (rectangular fault) to infer fault geometry and rupture kinematics, using Ascending and Descending viewing geometries to improve constraints.
+- Best-fit solutions are the 6.5 km rupture-length models, consistent with the 6.5 to 7 km butterfly length measured directly from the interferograms in GIS-apps, with strike clustering around 167 to 170 degrees and rake near strike-slip.
+- Slip, dip, and depth extent tradeoffs, similar surface deformation can be produced by higher slip over a shallower rupture or lower slip extending deeper, so model selection must combine fit metrics with physical plausibility and external constraints.
 
 ### Why it matters for ERG
-- _Our data_
-- _Our region_
-- _Our workflows_
+- This project uses the Sentinel-1 interferograms obtained from the HyP3 platform (ASC 20221111-20221123, DSC 20221119-20221201), with (still under development) preprocessing chain (ERA5 atmospheric correction (with possibility to add more weather model), coherence and water masking, ramp removal, and metadata extraction), quadtree downsampling, and vector calculation for Okada inversion inputs.
+- The Cianjur earthquake is similar to the Newcastle earthquake (1989), which has moderate magnitude but high-impact event, especially in Indonesia, where hidden or poorly mapped faults can cause severe losses
+- This project uses an end-to-end reproducible workflow from data acquisition, preprocessing, downsampling, vector calculation, inversion, and forward modelling. 
 
 ---
 
